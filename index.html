@@ -84,7 +84,15 @@
 		var light2 = new THREE.PointLight( 0x0040ff, 3, 50 );
 		scene.add( light2 );
 		var light3 = new THREE.PointLight( 0x80ff80, 4, 50 );
-		scene.add( light3 );    
+		scene.add( light3 );
+                
+		var directionalLight = new THREE.DirectionalLight( 0xFFFFFF, 1 );
+		directionalLight.position.set( 0, 1, 0 );
+		scene.add( directionalLight );
+                
+		var spotLight = new THREE.SpotLight( 0xFF45F6, 25 );
+		spotLight.position.set( 0, 3, 0 );
+		scene.add( spotLight );
     
 		// game logic
 		var update = function( )
